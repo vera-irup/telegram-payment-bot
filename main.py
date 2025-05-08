@@ -18,7 +18,7 @@ async def handle_photo(message: types.Message):
         await message.reply("Пожалуйста, отправьте email в подписи к скриншоту.")
         return
     await message.forward(config.ADMIN_ID)
-    await message.reply("Спасибо! Мы проверим оплату и скоро откроем доступ.")
+    await message.reply("Спасибо! Мы проверим оплату и в течении 24 часов откроем доступ. Ссылка с логином и паролем придёт на указанную почту.")
 
 @dp.message_handler(lambda msg: '@' in msg.text or '.' in msg.text)
 async def handle_email(message: types.Message):
